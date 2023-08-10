@@ -15,6 +15,6 @@
       ]
     }
   },
-  "onCreateCommand": "julia --project=biojulia.github.io -e 'using Pkg; Pkg.instantiate(); Pkg.precompile();'",
-  "postStartCommand": "julia --project=biojulia.github.io -e 'using Xranklin; Xranklin.serve();'"
+  "postCreateCommand": "julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.precompile();'",
+  "postStartCommand": "julia --project=. -e 'using Xranklin; Xranklin.serve();'",
 }
