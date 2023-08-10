@@ -22,6 +22,7 @@ Once you have registered, you can access the [#biology slack channel](https://jo
 ## Community
 
 There are a number of ways to get involved in the community; **join us**!
+
 Whether you're an undergrad just trying to get code to work,
 or a post-doc developing new algorithms, you are welcome!
 
@@ -36,8 +37,8 @@ We use the [BioJulia GitHub organization](https://github.com/BioJulia) for the d
 GitHub is where you will find our source code, tracked issues, and the pull-requests.
 Issues and PRs should be on topic and technical,
 but for support and user questions,
-you can use [github discussions](https://github.com/orgs/BioJulia/discussions),
-the julia discourse forum, or chat channels below.
+you can use [GitHub discussions](https://github.com/orgs/BioJulia/discussions),
+the [Julia discourse forum](https://discourse.julialang.org/), or chat channels below.
 
 #### Forum
 
@@ -57,7 +58,7 @@ There is a specific category for [Biology and BioJulia](https://discourse.julial
 #### Chat
 
 For casual conversation and quick questions, we can be reached
-in the `#biology` channel on the [julia slack](https://julialang.org/slack/).
+in the `#biology` channel on the [Julia slack](https://julialang.org/slack/).
 It is a good place to start if you think you need help but aren't quite sure what you should be asking or where to ask it.
 
 There is also a [Julia zulip](https://julialang.zulipchat.com/) and the stream is `#biology-health-and-medicine`
@@ -66,7 +67,7 @@ There is also a [Julia zulip](https://julialang.zulipchat.com/) and the stream i
 
 If you are interested in medicine, health care, and public health, check out the JuliaHealth organization:
 
-    Website: https://juliahealth.org
-    GitHub: https://github.com/JuliaHealth
+- [Website](https://juliahealth.org)
+- [GitHub](https://github.com/JuliaHealth)
 
 A longer list of Julia organizations related to the life sciences and health sciences is available [here](https://juliahealth.org/related-organizations/).
