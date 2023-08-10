@@ -1,0 +1,18 @@
+{
+  "features": {
+    "ghcr.io/julialang/devcontainer-features/julia:1": {
+      "channel": "release"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "julialang.language-julia",
+        "tamasfe.even-better-toml",
+        "eamodio.gitlens"
+      ]
+    }
+  },
+  "onCreateCommand": "julia --project=biojulia.github.io -e 'using Pkg; Pkg.instantiate(); Pkg.precompile();'",
+  "postStartCommand": "julia --project=biojulia.github.io -e 'using Xranklin; Xranklin.serve();'"
+}
