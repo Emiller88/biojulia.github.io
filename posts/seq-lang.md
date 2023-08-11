@@ -6,6 +6,8 @@ date = Date("2020-01-23")
 author = "Jakob Nybo Nissen, Sabrina Ward"
 +++
 
+# On the performance and design of BioSequences compared to the Seq language
+
 ![](/assets/posts/seq-lang/featured_hu673fdf9bf6c03bbd2130cc0e6402b2ac_100218_720x0_resize_lanczos_2.png)
 
 ## Introduction
