@@ -1,5 +1,7 @@
 # Posts
 
+<!-- TODO Use fancy list_post function -->
+
 ~~~<h2><a href="./automa1">~~~ Tutorial to Automa: Part 1 ~~~</a></h2>~~~
 
 Find this notebook at https://github.com/jakobnissen/automa\_tutorial In bioinformatics, we have a saying: The first step of any ...

@@ -5,6 +5,8 @@ title = "Tutorial to Automa: Part 1"
 author = "Jakob Nybo Nissen"
 +++
 
+<!-- TODO Use Franklin to run these code blocks? -->
+
 # Tutorial to Automa: Part 1
 
 **Find this notebook at [https://github.com/jakobnissen//assets/posts/automa1/automa_tutorial](https://github.com/jakobnissen//assets/posts/automa1/automa_tutorial)**
