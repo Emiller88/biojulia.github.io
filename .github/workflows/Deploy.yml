@@ -3,14 +3,14 @@ on:
   push:
     branches:
       - master
-  pull_request:
+  pull_request_target:
+    types: [opened, synchronize]
     branches:
       - master
-    types: [opened, synchronize]
 
 env:
   GH_USERNAME: "BioJulia"
-  PREVIEWS_PREFIX: "previews/PR"  # will be followed by PR number
+  PREVIEWS_PREFIX: "previews/PR" # will be followed by PR number
 
 jobs:
   build-and-deploy:
