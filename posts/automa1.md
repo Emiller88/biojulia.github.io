@@ -38,7 +38,7 @@ In this first part of the tutorial I will show how to create parsers from data l
 
 For our example, let us begin with a simlified version of the FASTA format - we can call it “SimpleFasta”. Our format will be defined as something that looks like this:
 
-```
+```fasta
 >first
 TGATAGTAGTCGTGTGATA
 >second
@@ -882,8 +882,8 @@ parsedata();
 @time parsedata();
 ```
 
-```
+```!
 0.162113 seconds (150.04 k allocations: 133.520 MiB, 7.90% gc time)
 ```
 
-Okay, we're at slightly above 600 MB/s. Profiling confirms nearly all time is spent encoding the DNA sequences to `LongSequence`. We can make it faster still by not storing the data as a `LongSequence`, and instead make it a “lazy” object that only constructs the sequence upon demand. Even further, we could avoid heap-allocating each sequence individually. But these optimizations do not pertain directly to Automa, and I will leave them here.
+Okay, we're at slightly above 600 MB/s. Profiling confirms nearly all time is spent encoding the DNA sequences to `LongSequence`. We can make it faster still by not storing the data as a `LongSequence`, and instead make it a "lazy" object that only constructs the sequence upon demand. Even further, we could avoid heap-allocating each sequence individually. But these optimizations do not pertain directly to Automa, and I will leave them here.
