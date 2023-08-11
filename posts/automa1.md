@@ -48,7 +48,7 @@ AGGACCCAATTATCGGGGTAA
 I.e.
 
 - A SimpleFasta file is a sequence of zero or more _records_
-- A _record_ consists of _header_ \* newline \* _sequence_ \* newline, where “\*” signifies concatenation
+- A _record_ consists of _header_ \* newline \* _sequence_ \* newline, where "\*" signifies concatenation
 - A _header_ consists of `>` followed by one or more characters from the alphabet a-z
 - A _sequence_ consists of one or more chatacters from the alphabet A, C, G or T.
 
