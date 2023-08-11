@@ -1,6 +1,6 @@
 # Posts
 
-### [Tutorial to Automa: Part 1](./automa1)
+~~~<h2><a href="./automa1">~~~ Tutorial to Automa: Part 1 ~~~</a></h2>~~~
 
 Find this notebook at https://github.com/jakobnissen/automa\_tutorial In bioinformatics, we have a saying: The first step of any ...
 
@@ -8,7 +8,7 @@ Find this notebook at https://github.com/jakobnissen/automa\_tutorial In bioinfo
 
 Aug 30, 2020 24 min read
 
-### [What scientists must know about hardware to write fast code](./hardware)
+~~~<h2><a href="./hardware">~~~ What scientists must know about hardware to write fast code ~~~</a></h2>~~~
 
 Find this notebook at https://github.com/jakobnissen/hardware\_introduction Programming is used in many fields of science today, where ...
 
@@ -16,7 +16,7 @@ Find this notebook at https://github.com/jakobnissen/hardware\_introduction Prog
 
 Apr 19, 2020 54 min read
 
-### [Bio.jl is old and deprecated](./biojl)
+~~~<h2><a href="./biojl">~~~ Bio.jl is old and deprecated ~~~</a></h2>~~~
 
 Hi there! There have been incidents of confusion where newer users have tried to install and run an old and deprecated BioJulia package ...
 
@@ -26,7 +26,7 @@ Jan 23, 2020 2 min read
 
 [![](/assets/posts/biojl/featured_hu673fdf9bf6c03bbd2130cc0e6402b2ac_100218_150x0_resize_lanczos_2.png)](./biojl)
 
-### [On the performance and design of BioSequences compared to the Seq language](./seq-lang)
+~~~<h2><a href="./seq-lang">~~~ On the performance and design of BioSequences compared to the Seq language ~~~</a></h2>~~~
 
 Introduction In October 2019, a paper was published in Proceedings of the ACM on Programming Languages, introducing a new language for ...
 
