@@ -179,7 +179,7 @@ concatenation
 
 `alt(re1, re2...)`
 
-`\|`
+`|`
 
 alternation
 
@@ -203,7 +203,7 @@ intersection
 
 `diff(re1, re2)`
 
-`\` | difference (subtraction) |
+`&bsol` | difference (subtraction) |
 
 `neg(re)`
 
