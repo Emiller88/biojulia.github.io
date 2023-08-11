@@ -6,7 +6,7 @@ date = Date("2020-01-23")
 author = "Jakob Nybo Nissen, Sabrina Ward"
 +++
 
-![](post/seq-lang/featured_hu673fdf9bf6c03bbd2130cc0e6402b2ac_100218_720x0_resize_lanczos_2.png)
+![](/assets/posts/seq-lang/featured_hu673fdf9bf6c03bbd2130cc0e6402b2ac_100218_720x0_resize_lanczos_2.png)
 
 ## Introduction
 
@@ -28,7 +28,7 @@ We note that the provided version of Seq provides wrong answers to the benchmark
 
 The results of our recreation are seen in the plot below. We were happy to see we could recreate their performance difference, seeing nearly the same performance difference they found.
 
-![figure-1](fig1.png) **Figure 1. Running time of BioJulia (blue) versus Seq (red). We could recreate the authors findings and found Seq to be much faster than BioJulia for the three provided benchmarks. The barplot shows shows the mean +/- stddev time of 5 consecutive runs.**
+![figure-1](/assets/posts/seq-lang/fig1.png) **Figure 1. Running time of BioJulia (blue) versus Seq (red). We could recreate the authors findings and found Seq to be much faster than BioJulia for the three provided benchmarks. The barplot shows shows the mean +/- stddev time of 5 consecutive runs.**
 
 ## Improving the benchmarked code
 
@@ -36,13 +36,13 @@ As a long time developers and users of BioJulia, we feel qualified to judge whet
 
 However, the Seq author’s Julia benchmarks were well implemented. Only the code for the CpG benchmark could be improved by fixing an error which resulted in incorrect answers, and by computing the result in a single pass of the input sequence. The two other benchmarks only needed minor tweaking to be idiomatic. These minor changes did not improve the timings of BioJulia markedly (**Figure 2**).
 
-![figure-2](fig2.png) **Figure 2. Improving the Julia code of the Seq paper’s benchmarks (green series), did not change the results very much. The barplot shows shows the mean +/- stddev time of 5 consecutive runs.**
+![figure-2](/assets/posts/seq-lang/fig2.png) **Figure 2. Improving the Julia code of the Seq paper’s benchmarks (green series), did not change the results very much. The barplot shows shows the mean +/- stddev time of 5 consecutive runs.**
 
 ## Explaining the difference in performance
 
 It seems that Seq really is much faster than BioJulia, at least for the benchmarked tasks, and we wanted to know why. So we profiled their BioJulia code to see what BioJulia was taking its sweet time doing. The results for the three benchmarks are shown below in **Figure 3**.
 
-![figure3](fig3.png) **Figure 3. Barplots showing the fraction of time BioJulia benchmarking code was spending doing various sub-tasks, as determined by the built-in Julia Profiler tool.**
+![figure-3](/assets/posts/seq-lang/fig3.png) **Figure 3. Barplots showing the fraction of time BioJulia benchmarking code was spending doing various sub-tasks, as determined by the built-in Julia Profiler tool.**
 
 Surprisingly, **Figure 3** reveals that only a small fraction of the time is spent doing what the benchmark nominally measures. For example, the RC benchmark presumably should benchmark reverse-complementation (RC’ing) of sequences, but BioJulia spends less than 10% of the time actually RC’ing. Likewise, checking symmetric kmers and kmer iteration in the 16-mer benchmark is relatively insignificant time-wise. We implemented Seq’s algorithm for RC’ing kmers as described in their paper, but found no difference in performance to BioJulia’s approach, even when benchmarking only the time spent RC’ing.
 
@@ -68,7 +68,7 @@ BioSequences may be more memory efficient and safer to use, we still verified th
 
 Figure 4 shows the performance of our SeqJL code (**Figure 4**, red), where it is significantly faster than Seq, except in the RC benchmark (**Figure 4**, orange). We found that even further speed improvements could be found by buffering input and output using the BufferedStreams.jl package, but we did not use that in the benchmarks.
 
-![figure-4](fig4.png) **Figure 4. Timing a Julia implementation of the data types in Seq (red) resulted in timings which beat those achieved by the Seq code (orange). The barplot shows shows the mean +/- stddev time of 5 consecutive runs.**
+![figure-4](/assets/posts/seq-lang/fig4.png) **Figure 4. Timing a Julia implementation of the data types in Seq (red) resulted in timings which beat those achieved by the Seq code (orange). The barplot shows shows the mean +/- stddev time of 5 consecutive runs.**
 
 ## Learning from Seq
 
@@ -78,7 +78,7 @@ In most realistic workloads, sequences are subject to more intense processing, w
 
 We were happy to discover that these changes made a big difference. With the updates, BioSequences rivals Seq in speed while keeping its advantages of a lower memory footprint and doing data validation.
 
-![figure-5](fig5.png) **Figure 5. The newest version of BioSequences (purple) comes with performance improvements in encoding, decoding and IO, making it 3-4 times faster than BioSequences v 1.1.0 (green) for these benchmarks, and rivaling Seq (orange). The barplot shows shows the mean +/- stddev time of 5 consecutive runs.**
+![figure-5](/assets/posts/seq-lang/fig5.png) **Figure 5. The newest version of BioSequences (purple) comes with performance improvements in encoding, decoding and IO, making it 3-4 times faster than BioSequences v 1.1.0 (green) for these benchmarks, and rivaling Seq (orange). The barplot shows shows the mean +/- stddev time of 5 consecutive runs.**
 
 ## Our take away impressions
 
