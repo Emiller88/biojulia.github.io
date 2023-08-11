@@ -7,7 +7,7 @@ author = "Jakob Nybo Nissen"
 
 # Tutorial to Automa: Part 1
 
-**Find this notebook at [https://github.com/jakobnissen/automa_tutorial](https://github.com/jakobnissen/automa_tutorial)**
+**Find this notebook at [https://github.com/jakobnissen//assets/posts/automa1/automa_tutorial](https://github.com/jakobnissen//assets/posts/automa1/automa_tutorial)**
 
 In bioinformatics, we have a saying:
 
@@ -81,7 +81,7 @@ end;
 display_machine()
 ```
 
-![svg](automa_tutorial_2_0.svg)
+![svg](/assets/posts/automa1/automa_tutorial_2_0.svg)
 
 After the beginning of the file, we expect to see a header. Next, we move to the sequence. From there, we can either reach the end of the file, or loop back to another header. Alternatively, in the case of an empty file, we may move from the beginning of the file to the end immediately without any headers or sequences. We consider an empty file to also be specification-compliant.
 
@@ -113,7 +113,7 @@ begin -> end;
 display_machine()
 ```
 
-![svg](automa_tutorial_4_0.svg)
+![svg](/assets/posts/automa1/automa_tutorial_4_0.svg)
 
 How does the machine know when it's supposed to transition between states? Suppose a machine is at the beginning of a file and it begins by observing the input `>`. Is this part of a transition to the header state, or the beginning of a malformed input?
 
@@ -146,7 +146,7 @@ end [ shape = circle ];
 display_machine()
 ```
 
-![svg](automa_tutorial_6_0.svg)
+![svg](/assets/posts/automa1/automa_tutorial_6_0.svg)
 
 The diagram above is exactly equivalent to the previous one, but this diagram makes a state transition for _every single_ input byte. All bytes cause a transition, and no transition consumes multiple bytes. For simplicity, Automa's parsers work like that.
 
@@ -250,7 +250,7 @@ end;
 display_machine(machine)
 ```
 
-![svg](automa_tutorial_13_0.svg)
+![svg](/assets/posts/automa1/automa_tutorial_13_0.svg)
 
 Yes, that looks correct! The start node here is the small point on the left. You can see one of the states are represented by a double circle. This represents an _accept state_, where the machine may stop at a valid end of input - here after each SimpleFasta record. If the machine stops at any other state, it did not complete correctly. In other words, state “1” here doubles as the “end” state.
 
@@ -378,7 +378,7 @@ Also note that the diagram structure itself changed, because the entering state 
 display_machine(machine)
 ```
 
-![svg](automa_tutorial_25_0.svg)
+![svg](/assets/posts/automa1/automa_tutorial_25_0.svg)
 
 Let's also define a simple data structure to parse the SimpleFasta records into. Like our SimpleFasta format, let's not overcomplicate things:
 
@@ -479,7 +479,7 @@ The machine now has a subtle change with a small loop between node 5 and 6 repre
 display_machine(machine)
 ```
 
-![svg](automa_tutorial_37_0.svg)
+![svg](/assets/posts/automa1/automa_tutorial_37_0.svg)
 
 We also need to update the `actions`. Here, I use `:(this syntax)`, which is equivalent to
 
@@ -579,7 +579,7 @@ The machine is now a bit more complicated. But who cares, it's automatically gen
 display_machine(machine)
 ```
 
-![svg](automa_tutorial_47_0.svg)
+![svg](/assets/posts/automa1/automa_tutorial_47_0.svg)
 
 ## Pitfall 1: Ambiguous parsers
 
