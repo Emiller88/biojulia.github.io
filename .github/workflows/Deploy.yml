@@ -22,7 +22,7 @@ jobs:
       - name: 👀 Set preview path for PRs
         run: |
           echo 'PRID=${{ env.PREVIEWS_PREFIX}}${{ github.event.number}}' >> $GITHUB_ENV
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request_target'
         shell: bash
 
       - name: 🚀 Build and Deploy
@@ -42,4 +42,4 @@ jobs:
             Preview should be up in a couple of mins at
             https://${{ env.GH_USERNAME }}.github.io/${{ env.REPO_PREFIX }}/${{ env.PRID }}
             (if you get a 404, wait 30s then refresh).
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request_target'
